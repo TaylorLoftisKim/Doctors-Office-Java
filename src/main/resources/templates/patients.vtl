@@ -1,0 +1,8 @@
+<h1> List of current patients </h1>
+#if ($patients)
+<ul>
+  #foreach ($patient in $patients)
+  <li>$patient.getName()</li>
+  #end
+</ul>
+#end

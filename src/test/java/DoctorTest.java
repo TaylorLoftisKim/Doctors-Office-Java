@@ -1,5 +1,6 @@
 import org.sql2o.*;
 import org.junit.*;
+import java.util.List;
 import static org.junit.Assert.*;
 
 public class DoctorTest {
@@ -8,7 +9,7 @@ public class DoctorTest {
 
   @Before
   public void setUp() {
-    DB.sql2o = new Sql2o("jdbc:postgresql://localhost:5432/doctors_office_test", null, null);
+    DB.sql2o = new Sql2o("jdbc:postgresql://localhost:5432/doctors_office", null, null);
   }
   //
   // @After
@@ -22,6 +23,14 @@ public class DoctorTest {
   @Test
   public void test_Doctor_instantiation(){
     assertEquals(true, doc1 instanceof Doctor);
+  }
+
+  @Test
+  public void test_ReturnsAllPatientsInList() {
+    Doctor doctor = new Doctor("Dr. Dong", "Koreans");
+    Patient patients = new Patient("Alex", "123", 1);
+    patients.save();
+    assertEquals(true, doctor.getPatients() instanceof List<?>);
   }
 
 }

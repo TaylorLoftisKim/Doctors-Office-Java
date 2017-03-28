@@ -1,0 +1,9 @@
+
+<h2>List of current doctors</h2>
+#if ($doctors)
+<ul>
+  #foreach ($doctor in $doctors)
+  <li>$doctor.getName()</li>
+  #end
+</ul>
+#end

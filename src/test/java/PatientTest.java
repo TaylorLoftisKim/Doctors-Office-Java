@@ -33,7 +33,6 @@ public class PatientTest {
   @Test
   public void check_if_all_works(){
     pt1.save();
-    String output = pt1.all().get(0).toString();
     assertEquals(true, pt1.all() instanceof List<?>);
 
   }

@@ -1,9 +1,20 @@
-<h1>What up</h1>
-  #if($patients)
-  <ul>
-    #foreach ($i in $patients)
-    <li>$i.getName()</li>
-    #end
-  </ul>
-  #else
-  #end
+
+<h1>Welcome to the hopistal boi $$$</h1>
+
+<h3>Add a Doctor</h3>
+<form action="/doctors" method="post">
+  <label for="">Doctor's Name</label>
+    <input type="text" name="doctor-name" value="">
+  <label for="">specialty</label>
+  <input type="text" name="specialty" value="">
+  <button type="submit" name="button">Add that boi</button>
+</form>
+
+<h3>Add a Patient</h3>
+<form action="/patients" method="post">
+  <label for="">Patient's Name</label>
+    <input type="text" name="patient-name" value="">
+  <label for="">Birth date</label>
+  <input type="text" name="dob" value="">
+  <button type="submit" name="button">Add that boi</button>
+</form>
