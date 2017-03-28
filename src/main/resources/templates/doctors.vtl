@@ -3,7 +3,8 @@
 #if ($doctors)
 <ul>
   #foreach ($doctor in $doctors)
-  <li>$doctor.getName()</li>
+  <a href="/doctors/$doctor.getId()"><li>$doctor.getName()</li></a>
   #end
 </ul>
 #end
+<a href="/">Home</a>

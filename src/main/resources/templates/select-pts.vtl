@@ -1,0 +1,10 @@
+<h1>Here are all Patients</h1>
+<form class="" action="index.html" method="post">
+#if ($patients)
+  <select name="pts">
+    #for(int i=0; i< 10; i++)
+    <option value="pt"+i>$patients.get(i).getName()</option>
+  #end
+  </select>
+#end
+</form>
